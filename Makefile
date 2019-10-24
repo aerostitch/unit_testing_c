@@ -19,8 +19,8 @@ cpputest:
 
 googletest:
 	# sudo apt-get install libgtest-dev libgmock-dev googletest google-mock googletest-tools
-	mkdir -p gtest/build && cd gtest/build; cmake .. && make all test && ./runUnitTests ; cd - && rm -rf gtest/build
+	mkdir -p gtest/build && cd gtest/build; cmake .. && make all && ./runUnitTests ; cd - && rm -rf gtest/build
 
 clean:
 	rm -rf search.o test_search_cunit
-	make -C cpputest clean
+	make -C cpputest realclean
